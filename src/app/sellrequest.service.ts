@@ -12,6 +12,8 @@ export class SellrequestService {
 
   // id!:number;
   // id=sellrequest.id
+
+  //id:number= sessionStorage.get(id)
   private url="http://localhost:8083/sellRequest/50.api"
 
   constructor( private http:HttpClient) { }
