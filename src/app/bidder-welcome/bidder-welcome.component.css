@@ -1,0 +1,13 @@
+.heading{
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: green;
+}
+table th{
+  color:green
+}
+button{
+  background-color: green;
+  color: white;
+}
