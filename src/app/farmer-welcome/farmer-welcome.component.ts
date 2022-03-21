@@ -15,6 +15,7 @@ export class FarmerWelcomeComponent implements OnInit {
   userId!:string|null
 
   ngOnInit(): void {
+
     this.userId=sessionStorage.getItem('userId')
     this.http.get(`http://localhost:8083/getFarmer/${this.userId}`).subscribe(res=>{this.farmerId=res
     // thissessionStorage.setItem(this.farmerId.farmerId);

@@ -27,6 +27,7 @@ export class BidderRegisterComponent implements OnInit {
 
     this.service.register(this.customer).subscribe(
       res=>{
+        alert(JSON.stringify(res))
       if(res.status==true){
 
         this.customerId=res.registeredCustomerId;
