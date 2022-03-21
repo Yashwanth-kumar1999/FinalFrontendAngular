@@ -12,6 +12,8 @@ import { FarmerWelcomeComponent } from './farmer-welcome/farmer-welcome.componen
 import { BidderWelcomeComponent } from './bidder-welcome/bidder-welcome.component';
 import { CustomerLoginComponent } from './customer-login/customer-login.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FarmerSoldhistoryComponent } from './farmer-soldhistory/farmer-soldhistory.component';
+import { MarketPlaceComponent } from './market-place/market-place.component';
 
 const routes: Routes = [
   { path: 'register/farmer', component: CustomerRegisterComponent},
@@ -23,7 +25,10 @@ const routes: Routes = [
   {path:'contact',component:ContactUsComponent},
   {component: FarmerSellrequestComponent, path:'sellrequest'},
   {path:'farmer-welcome' ,component:FarmerWelcomeComponent},
-  {path:'bidder-welcome' ,component: BidderWelcomeComponent}
+  {path:'bidder-welcome' ,component: BidderWelcomeComponent},
+  {path:'farmer-sellrequest',component:FarmerSellrequestComponent},
+  {path:'farmer-soldHistory',component:FarmerSoldhistoryComponent},
+  {path:'farmer-marketplace',component:MarketPlaceComponent}
 
 ]
 @NgModule({

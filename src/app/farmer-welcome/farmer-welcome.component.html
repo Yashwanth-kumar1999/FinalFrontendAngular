@@ -14,22 +14,22 @@
         <div class="main">
           <div class="card">
 
-            <form method="post" action="result.jsp">
+            <form >
 
                 <div class="container">
 
                   <table >
                   <tr>
                     <td></td>
-                    <td > <button type="button" class="btn"  style="text-align: center;">Place SellRequest </button></td>
+                    <td > <button  [routerLink]="['/farmer-sellrequest']" routerLinkActive="router-link-active"  type="button" class="btn"  style="text-align: center;">Place SellRequest </button></td>
                   </tr>
                   <tr>
                     <td></td>
-                    <td > <button type="button" class="btn"  style="text-align: center;">View Sold Crop History </button></td>
+                    <td > <button [routerLink]="['/farmer-soldHistory']" routerLinkActive="router-link-active"  type="button" class="btn"  style="text-align: center;">View Sold Crop History </button></td>
                   </tr>
                   <tr>
                     <td></td>
-                    <td > <button type="button" class="btn"  style="text-align: center;">View Market Place</button></td>
+                    <td > <button type="button" [routerLink]="['/farmer-marketplace']" routerLinkActive="router-link-active"   class="btn"  style="text-align: center;">View Market Place</button></td>
                   </tr>
                 </table>
                  </div>
