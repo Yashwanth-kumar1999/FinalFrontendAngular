@@ -20,10 +20,10 @@ export class CustomerLoginComponent implements OnInit {
       alert(JSON.stringify(res))
       console.log(res)
       if (res.status == true) {
-        sessionStorage.setItem('customerId', String(res.customerId));
+        sessionStorage.setItem('customerId', res.customerId);
         sessionStorage.setItem('customerName', res.customerName);
         sessionStorage.setItem('userTye',res.userType)
-
+console.log(sessionStorage)
         if(res.userType=="farmer"){
 
           this.router.navigate(['/farmer-welcome']);

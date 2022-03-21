@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FarmerWelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor( private http:HttpClient) { }
+  customerId!:string|null
 
   ngOnInit(): void {
+    this.customerId=sessionStorage.getItem('customerId')
+    console.log(this.customerId)
   }
+
+  farmerId:any| null
+getId(){
+
+  this.http.get("http://localhost:8083/getFarmer/`${this.customerId}`").subscribe(res=>this.farmerId=res )
+
+}
 
 }
