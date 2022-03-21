@@ -18,10 +18,10 @@
         <td>
           <input
             type="radio"
-            [(ngModel)]="radioValue"
+
             value="{{ bidding.bidId }}"
             name="selectCrop"
-            (click)="isSelected()"
+            (change)="getValue($event)"
           />
         </td>
         <td>{{ bidding.sellRequest.cropType }}</td>

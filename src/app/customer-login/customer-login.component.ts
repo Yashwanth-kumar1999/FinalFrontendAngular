@@ -22,7 +22,7 @@ export class CustomerLoginComponent implements OnInit {
       if (res.status == true) {
         sessionStorage.setItem('userId',res.userId);
         sessionStorage.setItem('userName', res.userName);
-        sessionStorage.setItem('userTye',res.userType)
+        sessionStorage.setItem('userType',res.userType)
 console.log(sessionStorage)
         if(res.userType=="farmer"){
 
