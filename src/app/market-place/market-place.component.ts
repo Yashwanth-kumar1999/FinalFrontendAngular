@@ -9,11 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class MarketPlaceComponent implements OnInit {
 
   FarmerBidding:any
+
+  x:any=sessionStorage.getItem('id')
+
   constructor( private http:HttpClient) { }
 
   ngOnInit(): void {
 
-     this.http.get("http://localhost:8083/getFarmerBIdding/50").subscribe(
+    let y;
+      if(this.x!=null){
+         y=JSON.parse(this.x);
+      }
+
+     this.http.get(`http://localhost:8083/getFarmerBIdding/${y}`).subscribe(
       res=>this.FarmerBidding=res
     )
   }

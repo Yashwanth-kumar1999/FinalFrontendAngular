@@ -10,17 +10,21 @@ export class SoldHistoryService {
 
 
 
-
+  x:any=sessionStorage.getItem('id')
   constructor(private http:HttpClient) { }
 
-  private url="http://localhost:8083/getAllFarmerSoldHistory/53"
+
 
 getAllSoldHistory(){
 
 
-return this.http.get(`${this.url}`);
+  let y;
+      if(this.x!=null){
+         y=JSON.parse(this.x);
+      }
+
+return this.http.get(`http://localhost:8083/getAllFarmerSoldHistory/${y}`);
+
 
 }
-
-
 }

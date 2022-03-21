@@ -20,8 +20,8 @@ export class CustomerLoginComponent implements OnInit {
       alert(JSON.stringify(res))
       console.log(res)
       if (res.status == true) {
-        sessionStorage.setItem('customerId', res.customerId);
-        sessionStorage.setItem('customerName', res.customerName);
+        sessionStorage.setItem('userId',res.userId);
+        sessionStorage.setItem('userName', res.userName);
         sessionStorage.setItem('userTye',res.userType)
 console.log(sessionStorage)
         if(res.userType=="farmer"){

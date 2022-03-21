@@ -1,7 +1,7 @@
 export class LoginStatus {
 
 status!:boolean
-customerId!:string
-customerName!:string
+userId!:string
+userName!:string
 userType!:string
 }

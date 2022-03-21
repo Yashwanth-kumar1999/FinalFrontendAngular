@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,19 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FarmerWelcomeComponent implements OnInit {
 
-  constructor( private http:HttpClient) { }
-  customerId!:string|null
+  farmerId:any=0
+  apiId!:number
+  constructor( private http:HttpClient) {}
+  userId!:string|null
 
   ngOnInit(): void {
-    this.customerId=sessionStorage.getItem('customerId')
-    console.log(this.customerId)
+    this.userId=sessionStorage.getItem('userId')
+    this.http.get(`http://localhost:8083/getFarmer/${this.userId}`).subscribe(res=>{this.farmerId=res
+    // thissessionStorage.setItem(this.farmerId.farmerId);
+    sessionStorage.setItem('id',JSON.stringify(res) );
+
+  }
+    )
+
+   console.log(this.userId);
+
   }
 
-  farmerId:any| null
-getId(){
 
-  this.http.get("http://localhost:8083/getFarmer/`${this.customerId}`").subscribe(res=>this.farmerId=res )
-
-}
 
 }
