@@ -13,5 +13,13 @@ export class AdminDashboardService {
 
   getAllDetails(){
     return this.http.get(`${this.url}`);
+
+
   }
+  private url2="http://localhost:8083/getAllBiddingDetails"
+  getAllBidding(){
+          return this.http.get(`${this.url2}`)
+  }
+
+
 }
